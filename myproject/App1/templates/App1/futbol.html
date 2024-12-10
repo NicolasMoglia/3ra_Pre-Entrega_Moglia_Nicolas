@@ -1,0 +1,48 @@
+{% extends 'App1/base.html' %}
+
+
+{% block content %}    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTBOL</title>
+</head>
+<body>
+    <h2 class="text-center mt-2">Buscar Casaca</h2>
+<!-- Formulario de búsqueda -->
+<div class="d-flex flex-column align-items-center mb-2">
+    <form action="" method="GET">
+        <input type="text" name="q" placeholder="Buscar..." required>
+        <button type="submit">Buscar</button>
+    </form>
+</div>
+    <h1 class="text-center">LAS MEJORES CASACAS DE FUTBOL</h1>>
+    <div class="container">
+    <table class="table">
+        <thead>
+          <tr class="table-danger">
+            <th scope="col">EQUIPO</th>
+            <th scope="col">TALLE</th>
+            <th scope="col">NUMERO</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for vf in v_fut %}
+          <tr class="table-success">
+            <td>{{vf.equipo}}</td>
+            <td>{{vf.talle}}</td>
+            <td>{{vf.numero}}</td>
+            {% endfor %}
+        </tr>
+        </tbody>
+      </table>
+    </div>
+</body>
+</html>
+
+{% endblock %}
+{% block title %}
+Ke KasaKa - Futbol           
+{% endblock %}
